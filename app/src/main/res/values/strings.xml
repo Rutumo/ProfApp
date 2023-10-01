@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProfApp</string>
+    <string name="title_activity_splashscreen_activiry">Splashscreen_Activiry</string>
+    <string name="troctor">Troctor</string>
+    <string name="maintenance">Troctor</string>
+    <string name="shop">Shop</string>
+</resources>
