@@ -10,6 +10,7 @@ import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -35,6 +36,7 @@ sealed class AppScreen(val route: String, @StringRes val resourceId: Int, val ic
     object Troctor : AppScreen("screen_troctor",R.string.troctor, Icons.Default.Home)
     object Maintenance : AppScreen("screen_maintenace", R.string.maintenance, Icons.Default.Settings)
     object Shop : AppScreen("screen_shop", R.string.shop, Icons.Default.ShoppingCart)
+    object Profile : AppScreen("screen_profile", R.string.profile, Icons.Default.Person)
 }
 
 class MainActivity : ComponentActivity() {
@@ -61,7 +63,8 @@ fun AppLayout(modifier: Modifier = Modifier) {
     val bottomListItems = listOf(
         AppScreen.Troctor,
         AppScreen.Maintenance,
-        AppScreen.Shop
+        AppScreen.Shop,
+        AppScreen.Profile
     )
 
     val navController = rememberNavController()
@@ -97,7 +100,8 @@ fun AppLayout(modifier: Modifier = Modifier) {
             composable(AppScreen.Troctor.route){ Text(text = "Tractor")}
             composable(AppScreen.Maintenance.route){ Text(text = "Miantenance")}
             composable(AppScreen.Shop.route){ Text(text = "Shop")}
-            co
+            composable(AppScreen.Profile.route){ ProfileScreen(modifier = Modifier)}
+
         }
     }
 }

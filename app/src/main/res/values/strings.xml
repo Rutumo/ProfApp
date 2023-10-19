@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">ProfApp</string>
-    <string name="title_activity_splashscreen_activiry">Splashscreen_Activiry</string>
+    <string name="title_activity_splashscreen_activiry">Cours</string>
     <string name="troctor">Troctor</string>
     <string name="maintenance">Troctor</string>
     <string name="shop">Shop</string>
+    <string name="profile">Profile</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 </resources>
